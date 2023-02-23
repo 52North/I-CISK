@@ -16,15 +16,20 @@ This document describes the architecture for the Climate Service designed for th
 ## Requirements Overview {#_requirements_overview}
 The Climate Service for the I-CISK project aims to fulfill the following goals:
 
--   establish a connection to Copernicus, SMHI and other data providers,
+- provide access to a combination of different sources for environmental data e.g. from the Copernicus Program [], the Swedish Meteorological and Hydrological Institute (SMHI) [] and, in particular, a variety of local data sources;
 
--   establish a connection to several other local data providers,
+- integrate models for bias correction, downscaling and indicator calculation;
 
--   provide visualization and storytelling tools,
+- provide visualisation tools for the indicators that are required by the individual LLs;
 
--   meet other relevant requirements of the different Living Labs.
+- provide stakeholders with the possibility to easily extend the existing functionality by modifying and adding individual components.
 
 ## Quality Goals {#_quality_goals}
+
+- comprehensive visualisation techniques that are adapted to the stakeholders needs
+
+- modular integration of models and data sources such that individual components can be combined for the calculation of different indicators in a flexible way
+- easy operation and comprehensive documentation of software components to enable stakeholders to further extend the CS also after the project duration
 
 ## Stakeholders {#_stakeholders}
 
