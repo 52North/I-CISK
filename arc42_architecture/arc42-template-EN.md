@@ -1,3 +1,4 @@
+
 # 
 
 **About arc42**
@@ -24,15 +25,41 @@ The Climate Service for the I-CISK project aims to fulfill the following goals:
 
 - provide stakeholders with the possibility to easily extend the existing functionality by modifying and adding individual components.
 
+- *something on the auto-composer?*
+
 ## Quality Goals {#_quality_goals}
-
-- comprehensive visualisation techniques that are adapted to the stakeholders needs
-
-- modular integration of models and data sources such that individual components can be combined for the calculation of different indicators in a flexible way
-- easy operation and comprehensive documentation of software components to enable stakeholders to further extend the CS also after the project duration
+<table>
+  <caption style="text-align:center"> Table 1: List of Quality Scenarious.</caption>
+  <tbody>
+    <tr>
+      <th align="left">Scenario ID</th>
+      <th align="left">Scenario</th>
+    </tr>
+    <tr>
+      <td>SC1</td>
+      <td> The visualisation of the climate indicators is comprehensive and adapted to the stakeholders needs such that the CS users can interpret the results without the need for further background knowledge.
+     </td>
+    </tr>
+    <tr>
+      <td>SC2</td>
+      <td> *something on the auto-composer?*
+     </td>
+    </tr>
+    <tr>
+      <td>SC3</td>
+      <td> Models and data are integrated in the CS in a modular way such that individual components can be combined for the calculation of different indicators in a flexible way and further components can be added without changing the core architecture.
+     </td>
+    </tr>
+    <tr>
+      <td>SC4</td>
+      <td> The software is well documented and easy to operate such that stakeholders with reasonable background knowledge can extend the functionality of the CS also after the project duration without further support.
+     </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Summary of stakeholder requirements for each Living Lab {#_stakeholders}
-This  section summarises the current status of the properties that have been identified as necessary for the individual CS components by the LL leaders. Thereby, the requirements for the back end are collected separately from those for the front end. The individual components that are considered for the back end are the
+This  section summarises the current status of the properties that have been identified as necessary for the individual CS components by the LL leaders. Thereby, the requirements for the back-end are collected separately from those for the front-end. The individual components that are considered for the back end are the
 
 - Climate Data Hindcast/Forecast Providers (the external data recources excluding local recources)
 
@@ -52,10 +79,6 @@ This  section summarises the current status of the properties that have been ide
 
 - Climate Model and Adaption/Economic Model Providers (external services or I-CISK WPs that provide the models) <br>
 
-<figure>
-  <img src="figures/introduction/LL1_backend.jpg"/>
-  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
-</figure>
 
 On the other hand, the components which are relevant for the backend are the
 
@@ -67,12 +90,19 @@ On the other hand, the components which are relevant for the backend are the
 
 - Web Service <br>
 
+### Requirements of LL1 {#_stakeholders}
+
+<figure>
+  <img src="figures/introduction/LL1_backend.jpg"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
+
 <figure>
   <img src="figures/introduction/LL1_frontend.jpg"/>
   <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
 </figure>
 
-
+### Summary of requirements regarding CS architecture
 <table>
   <caption style="text-align:center"> Table 1: Selection of stakeholders for each living lab and their expectations regarding the CS functionality and architecture. If there is a focus on a particular group of stakeholders, this group is marked by (*).</caption>
   <tbody>
@@ -117,16 +147,6 @@ On the other hand, the components which are relevant for the backend are the
 
 
 [1] IBF-system, accessible via [https://github.com/rodekruis/IBF-system](https://github.com/rodekruis/IBF-system)
-
-+-------------+---------------------------+---------------------------+
-| Role/Name   | Contact                   | Expectations              |
-+=============+===========================+===========================+
-| *           | *\<Contact-1\>*           | *\<Expectation-1\>*       |
-| \<Role-1\>* |                           |                           |
-+-------------+---------------------------+---------------------------+
-| *           | *\<Contact-2\>*           | *\<Expectation-2\>*       |
-| \<Role-2\>* |                           |                           |
-+-------------+---------------------------+---------------------------+
 
 # Architecture Constraints {#section-architecture-constraints}
 
@@ -300,11 +320,33 @@ Mapping of Building Blocks to Infrastructure
 # Risks and Technical Debts {#section-technical-risks}
 
 # Glossary {#section-glossary}
-
-+-----------------------+-----------------------------------------------+
-| Term                  | Definition                                    |
-+=======================+===============================================+
-| *\<CS\>*              | *\<Climate Service\>*                       |
-+-----------------------+-----------------------------------------------+
-| *\<LL\>*              | *\<Living Lab\>*                              |
-+-----------------------+-----------------------------------------------+
+<table>
+  <tbody>
+    <tr>
+      <th align="left">Term</th>
+      <th align="left">Definition</th>
+    </tr>
+    <tr>
+      <td>CS<td>
+      <td>Climate Service<td>
+    </tr>
+<tr>
+      <td>LL<td>
+      <td>Living Lab<td>
+    </tr>
+<tr>
+      <td>WMS<td>
+      <td>Web Map Service<td>
+    </tr>
+<tr>
+      <td>API<td>
+      <td>Application User Interface<td>
+    </tr>
+<tr>
+      <td>WP<td>
+      <td>Working Package<td>
+    </tr>
+  </tbody>
+</table>
+# References
+<div id="refs"> </refs>
