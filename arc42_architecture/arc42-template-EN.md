@@ -153,14 +153,16 @@ On the other hand, the components which are relevant for the backend are the
 [1] IBF-system, accessible via [https://github.com/rodekruis/IBF-system](https://github.com/rodekruis/IBF-system)
 
 # Architecture Constraints {#section-architecture-constraints}
-
+#
 # System Scope and Context {#section-system-scope-and-context}
-
+Figure 1 shows the major interfaces of the CS architecture to the CS user as well as external model providers and data recources. The user will be able to access the CS via a graphical user interface (GUI) and a REST-API. Due to the large variaty with respect to the developement stages of the individuel components, the communication protocols between the CS and the external components are so far only defined for some cases. The communication protocols for the other components will be characterised in the further course of the I-CISK project. For the components which are already more advanced, the communication protocols are indicated in Figure 1 and they are listed in Table X together with the corresponding providers.
+#
 <figure>
   <img src="figures/scope/ICISK_architecture_blackbox.png"/>
   <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
 </figure>
-
+#
+<int name="interfaces">
 <table>
   <caption style="text-align:center"> XXX </caption>
   <tbody>
@@ -215,7 +217,8 @@ On the other hand, the components which are relevant for the backend are the
     </tr>
   </tbody>
 </table>
-
+</int>
+#
 ## Business Context {#_business_context}
 
 **\<Diagram or Table\>**
@@ -235,6 +238,16 @@ On the other hand, the components which are relevant for the backend are the
 # Building Block View {#section-building-block-view}
 
 ## Whitebox Overall System {#_whitebox_overall_system}
+Going into more detail about the CS architecture, Figure X illustrates the Level 1 components. All these components will be deployed in an XXX cloud []. The major responsibilities of the corresponding building blocks are
+
+- **GeoNode**: GeoNode is a web framework that provides basic functionalities for the developement of spatial data infrastructures based on open sources software []. For the CS platform, the available features will be extended and modified according to the architecture requirements. <br>
+The major repsonsibilities of the GeoNode module include the visualisation of climate indicators via a GUI on the one hand and the provision of an access point to I-CISK web map services and data recources via an REST-API on the other hand. Internally, the GeoNode instance implements the communication interface between the Data Analysis Tool and the data storage components.
+
+- **WP3 visualisation examples**: The visualisation examples developed by WP3 of the I-CISK project will be integrated in the GeoNode GUI.
+
+- **internal local data**: For serveral LLs (e.g. Italy), local data will be uploaded manually to the CS platform and will be stored on internal capacities.
+
+- **Data Analysis Tool**: The calculation of the climate indicators is performed in the Data Analysis Tool. Necessary calculations steps include bias correction and downscaling procedures. Whereas for some indicators the respective models will run as components within the I-CISK platform, the estimation of other parameters requires the connection of external models.
 
 ***\<Overview Diagram\>***
 
