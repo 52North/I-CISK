@@ -31,7 +31,92 @@ The Climate Service for the I-CISK project aims to fulfill the following goals:
 - modular integration of models and data sources such that individual components can be combined for the calculation of different indicators in a flexible way
 - easy operation and comprehensive documentation of software components to enable stakeholders to further extend the CS also after the project duration
 
-## Stakeholders {#_stakeholders}
+## Summary of stakeholder requirements for each Living Lab {#_stakeholders}
+This  section summarises the current status of the properties that have been identified as necessary for the individual CS components by the LL leaders. Thereby, the requirements for the back end are collected separately from those for the front end. The individual components that are considered for the back end are the
+
+- Climate Data Hindcast/Forecast Providers (the external data recources excluding local recources)
+
+- Local Data Knowledge ECV (the local data recources)
+
+- EVC/Indicators (the target variables)
+
+- Data Types (the data types of the indicators)
+
+- Time Scenario (the time periods over which the indicators are aggregated)
+
+- Climate Models (models necessary to obtain the target indicators)
+
+- Climate Adaption/Economic Models (models which investigate the climate response of indicators to adaption strategies)
+
+- Run Mode of Climate Model and Adaption/Economic models (the run mode of climate and adaption models)
+
+- Climate Model and Adaption/Economic Model Providers (external services or I-CISK WPs that provide the models) <br>
+
+<figure>
+  <img src="figures/introduction/LL1_backend.jpg"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
+
+On the other hand, the components which are relevant for the backend are the
+
+- Visualisation Containers 
+
+- Visualisation Tools
+
+- Visualisation Tool Providers
+
+- Web Service <br>
+
+<figure>
+  <img src="figures/introduction/LL1_frontend.jpg"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
+
+
+<table>
+  <caption style="text-align:center"> Table 1: Selection of stakeholders for each living lab and their expectations regarding the CS functionality and architecture. If there is a focus on a particular group of stakeholders, this group is marked by (*).</caption>
+  <tbody>
+    <tr>
+      <th align="left">Living Lab</th>
+      <th align="left">Stakeholder profession</th>
+      <th align="left">Expectations regarding CS architecture</th>
+    </tr>
+    <tr>
+      <td>Spain LL (LL1)</td>
+      <td>Olive Farmers<br>Dairy Farmers on Oak-/Grassland</td>
+      <td>develop full CS that
+        <ul>
+          <li>provides a mobile app</li>
+          <li>provides weekly and long-term forecasts
+          <li>enabels to compare current climate data to historical data</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Greece LL (LL4)</td>
+      <td>developement company of Crete responsible for water management (*) <br>NGOs<br>municipality of port Rethimno<br>Greek National touris organisation<br>representatives of luxury hotel sector </td>
+      <td> develop full CS that 
+        <ul>
+          <li>provides forecasts on time scales from monthly to seasonal</li>
+          <li>provides climate projections</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Lesotho LL (LL7)</td>
+      <td> National Disaster Management Team<br>District Disaster Management Teams<br>Community Based Disaster Response Teams<br>Village Disaster Management Teams<br>National University of Lesotho</td>
+      <td> connect to an existing CS i.e.
+        <ul>
+          <li>provide WMS that can be accessed by excisting multi-active platform (IBF-system [1]) via an API</li>
+          <li>set up data analysis pipeline for weekly to seasonal forecasts that can be integrated in IBF-system after project run time</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+[1] IBF-system, accessible via [https://github.com/rodekruis/IBF-system](https://github.com/rodekruis/IBF-system)
 
 +-------------+---------------------------+---------------------------+
 | Role/Name   | Contact                   | Expectations              |
