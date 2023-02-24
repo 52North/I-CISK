@@ -156,6 +156,66 @@ On the other hand, the components which are relevant for the backend are the
 
 # System Scope and Context {#section-system-scope-and-context}
 
+<figure>
+  <img src="figures/scope/ICISK_architecture_blackbox.png"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
+
+<table>
+  <caption style="text-align:center"> XXX </caption>
+  <tbody>
+    <tr>
+      <th align="left">Component Group</th>
+      <th align="left">Individual Components</th>
+      <th align="left">Provider</th>
+      <th align="left">Protocol</th>
+      <th align="left">LL</th>
+    </tr>
+    <tr>
+      <th>Exernal Data</th>
+      <td>SMHI data</td>
+      <td>SMHI</td>
+      <td>FTP</td>
+      <td>several</td>
+    </tr>
+    <tr>
+      <th></th>
+      <td>Copernicus</td>
+      <td>Copernicus</td>
+      <td>REST-API</td>
+      <td>several</td>
+    </tr>
+ <tr>
+      <th>Local Data</th>
+      <td>Luftdaten</td>
+      <td>openSenseMap</td>
+      <td>API</td>
+      <td>Hungary LL</td>
+    </tr>
+ <tr>
+      <th></th>
+      <td>iNaturalist</td>
+      <td>iNaturalist</td>
+      <td>TBD</td>
+      <td>Hungary LL</td>
+    </tr>
+<tr>
+      <th></th>
+      <td>droogte/zomermonitor</td>
+      <td>water board rijnland</td>
+      <td>PDF download</td>
+      <td>Rijnland LL</td>
+    </tr>
+    <tr>
+      <th>Models</th>
+      <td>CREAF downscaling</td>
+      <td>CREAF</td>
+      <td>WMS or REST-API</td>
+      <td>Spain LL</td>
+    </tr>
+  </tbody>
+</table>
+
 ## Business Context {#_business_context}
 
 **\<Diagram or Table\>**
