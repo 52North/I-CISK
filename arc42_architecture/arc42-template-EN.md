@@ -42,16 +42,20 @@ The Climate Service for the I-CISK project aims to fulfill the following goals:
     </tr>
     <tr>
       <td>SC2</td>
-      <td> *something on the auto-composer?*
-     </td>
+      <td> *something on the auto-composer?*</td>
     </tr>
     <tr>
+    <tr>
       <td>SC3</td>
+      <td> *something on open source?*</td>
+    </tr>
+    <tr>
+      <td>SC4</td>
       <td> Models and data are integrated in the CS in a modular way such that individual components can be combined for the calculation of different indicators in a flexible way and further components can be added without changing the core architecture.
      </td>
     </tr>
     <tr>
-      <td>SC4</td>
+      <td>SC5</td>
       <td> The software is well documented and easy to operate such that stakeholders with reasonable background knowledge can extend the functionality of the CS also after the project duration without further support.
      </td>
     </tr>
