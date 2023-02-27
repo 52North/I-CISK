@@ -156,12 +156,12 @@ On the other hand, the components which are relevant for the backend are the
 #
 # System Scope and Context {#section-system-scope-and-context}
 Figure 1 shows the major interfaces of the CS architecture to the CS user as well as external model providers and data recources. The user will be able to access the CS via a graphical user interface (GUI) and a REST-API. Due to the large variaty with respect to the developement stages of the individuel components, the communication protocols between the CS and the external components are so far only defined for some cases. The communication protocols for the other components will be characterised in the further course of the I-CISK project. For the components which are already more advanced, the communication protocols are indicated in Figure 1 and they are listed in Table X together with the corresponding providers.
-#
+
 <figure>
-  <img src="figures/scope/ICISK_architecture_blackbox.png"/>
+  <img src="figures/architecture/I-CISK_architecture-architecture_blackbox.drawio.png"/>
   <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
 </figure>
-#
+
 <int name="interfaces">
 <table>
   <caption style="text-align:center"> XXX </caption>
@@ -277,31 +277,30 @@ The GeoNode web framework is built from various components of which some are man
 - **Data Catalogue**: GeoNode provides a data catalogue in which data is registered with the appropriate meta data. The metadata is generated from a Django relation database and published via pycsw.
 
 
-### White Box *\<building block 2\>* {#_white_box_emphasis_building_block_2_emphasis}
+### White Box Data Analysis Tool {#_white_box_emphasis_building_block_2_emphasis}
 
-*\<white box template\>*
+<figure>
+  <img src="figures/architecture/I-CISK_architecture-DataAnalysisTool_whitebox.drawio.png"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
 
-...
-
-### White Box *\<building block m\>* {#_white_box_emphasis_building_block_m_emphasis}
-
-*\<white box template\>*
 
 ## Level 3 {#_level_3}
 
-### White Box \<\_building block x.1\_\> {#_white_box_building_block_x_1}
+### White Box Graphical User Interface {#_white_box_building_block_x_1}
 
-*\<white box template\>*
+<figure>
+  <img src="figures/architecture/I-CISK_architecture-GUI.drawio.png"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
 
-### White Box \<\_building block x.2\_\> {#_white_box_building_block_x_2}
-
-*\<white box template\>*
-
-### White Box \<\_building block y.1\_\> {#_white_box_building_block_y_1}
-
-*\<white box template\>*
 
 # Runtime View {#section-runtime-view}
+
+<figure>
+  <img src="figures/architecture/I-CISK_architecture-sequence_diagram.drawio.png"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
 
 ## \<Runtime Scenario 1\> {#__runtime_scenario_1}
 

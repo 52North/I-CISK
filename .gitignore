@@ -1,2 +1,6 @@
-
+.gitignore
 arc42_architecture/arc42-template-EN.html
+.idea
+download*
+pyvenv.cfg
+share/
