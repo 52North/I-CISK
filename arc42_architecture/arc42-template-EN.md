@@ -240,62 +240,42 @@ Figure 1 shows the major interfaces of the CS architecture to the CS user as wel
 ## Whitebox Overall System {#_whitebox_overall_system}
 Going into more detail about the CS architecture, Figure X illustrates the Level 1 components. All these components will be deployed in an XXX cloud []. The major responsibilities of the corresponding building blocks are
 
-- **GeoNode**: GeoNode is a web framework that provides basic functionalities for the developement of spatial data infrastructures based on open sources software []. For the CS platform, the available features will be extended and modified according to the architecture requirements. <br>
-The major repsonsibilities of the GeoNode module include the visualisation of climate indicators via a GUI on the one hand and the provision of an access point to I-CISK web map services and data recources via an REST-API on the other hand. Internally, the GeoNode instance implements the communication interface between the Data Analysis Tool and the data storage components.
+- **GeoNode web framework**: GeoNode is a web framework that provides basic functionalities for the developement of spatial data infrastructures based on open sources software []. For the CS platform, the available features will be extended and modified according to the architecture requirements. <br>
+The major repsonsibilities of the GeoNode module include the visualisation of climate indicators via a GUI on the one hand and the provision of an access point to I-CISK web map services and data recources via an REST-API on the other hand. Internally, the GeoNode REST-API implements the communication interface between the Data Analysis Tool and the data storage components. The GeoNode web service also contributes with data  and task management tools.
 
-- **WP3 visualisation examples**: The visualisation examples developed by WP3 of the I-CISK project will be integrated in the GeoNode GUI.
+- **WP3 visualisation toolbox**: The visualisation examples developed by WP3 of the I-CISK project will be integrated in the GeoNode GUI. (?)
 
-- **internal local data**: For serveral LLs (e.g. Italy), local data will be uploaded manually to the CS platform and will be stored on internal capacities.
+- **Internal local data**: For serveral LLs (e.g. Italy), local data will be uploaded manually to the CS platform and will be stored on internal capacities.
 
 - **Data Analysis Tool**: The calculation of the climate indicators is performed in the Data Analysis Tool. Necessary calculations steps include bias correction and downscaling procedures. Whereas for some indicators the respective models will run as components within the I-CISK platform, the estimation of other parameters requires the connection of external models.
-
-***\<Overview Diagram\>***
-
-Motivation
-
-:   *\<text explanation\>*
-
-Contained Building Blocks
-
-:   *\<Description of contained building block (black boxes)\>*
-
-Important Interfaces
-
-:   *\<Description of important interfaces\>*
-
-### \<Name black box 1\> {#__name_black_box_1}
-
-*\<Purpose/Responsibility\>*
-
-*\<Interface(s)\>*
-
-*\<(Optional) Quality/Performance Characteristics\>*
-
-*\<(Optional) Directory/File Location\>*
-
-*\<(Optional) Fulfilled Requirements\>*
-
-*\<(optional) Open Issues/Problems/Risks\>*
-
-### \<Name black box 2\> {#__name_black_box_2}
-
-*\<black box template\>*
-
-### \<Name black box n\> {#__name_black_box_n}
-
-*\<black box template\>*
-
-### \<Name interface 1\> {#__name_interface_1}
-
-...
-
-### \<Name interface m\> {#__name_interface_m}
+#
+Do we need to also define the interfaces already?
 
 ## Level 2 {#_level_2}
 
-### White Box *\<building block 1\>* {#_white_box_emphasis_building_block_1_emphasis}
+### White Box GeoNode web framework {#_white_box_emphasis_building_block_1_emphasis}
+#
+<figure>
+  <img src="figures/architecture/GeoNode_whitebox.png"/>
+  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+</figure>
+#
+The GeoNode web framework is built from various components of which some are mandadory and some can be used on demand. Figure XXX shows the decomposition of the GeoNode components that will be used for the I-CISK platform. These components have the following responsibilities:
 
-*\<white box template\>*
+- **GUI**: The GUI enables the CS user to request the calculation and visualisation of particular indicators. It allows for interactive adjustment of calculation constraints. For example, it allows the user to change the time period over which data is aggregated for a selection of indicators with a slider or similar. The GUI also comes with a toolbox that enables the user to autonomously compose dedicated CS by combining different analysis procedures and data sets.
+
+- **REST-API**: The REST-API provides an access point for external services to services and data sets of the CS framework.
+
+- **Internal local data**: Local data that will be uploaded manually to the CS platform will be stored in a PostgreSQL data base in case of vector data and in the file system in  case of raster data. Also, meta data will be stored in the PostgreSQL data base.
+
+- **Task Manager**: Tasks that need to be executed on a regular basis, e.g. the update of local data recources, can be scheduled in GeoNode using a combination of Celery and RabbitQM. Whereas Celery organises the task queue and task ´excecution, RabbitQM constitutes the message broker. 
+
+- **GeoServer**:  The calculation results will be published by GeoServer which implements OGC standards.
+
+- **Data Ingestor**: The data ingestor component will read the data from the various recources and bring it into a format that is suitable for the data analysis. It adjusts the meta data to the OGC standards and ? transforms it into netCDF files? 
+
+- **Data Catalogue**: GeoNode provides a data catalogue in which data is registered with the appropriate meta data. The metadata is generated from a Django relation database and published via pycsw.
+
 
 ### White Box *\<building block 2\>* {#_white_box_emphasis_building_block_2_emphasis}
 
