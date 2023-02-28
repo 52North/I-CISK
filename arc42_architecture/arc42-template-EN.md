@@ -17,15 +17,13 @@ This document describes the architecture for the Climate Service designed for th
 ## Requirements Overview {#_requirements_overview}
 The Climate Service for the I-CISK project aims to fulfill the following goals:
 
-- provide access to a combination of different sources for environmental data e.g. from the Copernicus Program [], the Swedish Meteorological and Hydrological Institute (SMHI) [] and, in particular, a variety of local data sources;
+- provide access to environmental data both from *external* services (e.g. from the Copernicus Program [], the Swedish Meteorological and Hydrological Institute (SMHI) []) as well as a variety of local data sources;
 
-- integrate models for bias correction, downscaling and indicator calculation;
+- integrate analysis chains for indicator calculations which are developed in I-CISK WP3 and WP4,
 
-- provide visualisation tools for the indicators that are required by the individual LLs;
+- provide visualisation tools for the indicators;
 
-- provide stakeholders with the possibility to easily extend the existing functionality by modifying and adding individual components.
-
-- *something on the auto-composer?*
+- provide stakeholders with the possibility to easily extend the existing functionality by modifying and adding individual components as well as setting up a new CS with a dedicated AUTO CS Composer
 
 ## Quality Goals {#_quality_goals}
 <table>
@@ -42,28 +40,23 @@ The Climate Service for the I-CISK project aims to fulfill the following goals:
     </tr>
     <tr>
       <td>SC2</td>
-      <td> *something on the auto-composer?*</td>
-    </tr>
-    <tr>
-    <tr>
-      <td>SC3</td>
-      <td> *something on open source?*</td>
-    </tr>
-    <tr>
-      <td>SC4</td>
       <td> Models and data are integrated in the CS in a modular way such that individual components can be combined for the calculation of different indicators in a flexible way and further components can be added without changing the core architecture.
      </td>
     </tr>
     <tr>
-      <td>SC5</td>
-      <td> The software is well documented and easy to operate such that stakeholders with reasonable background knowledge can extend the functionality of the CS also after the project duration without further support.
+      <td>SC3</td>
+      <td> The AUTO CS Composer enables stakeholders without computational background knowledge to combine different data sets and analysis steps to build their own tailored CS.</td>
+    </tr>
+    <tr>
+      <td>SC4</td>
+      <td> The software is well documented and easy to operate such that stakeholders with reasonable background knowledge can extend the software functionality of the CS also after the project duration without further support.
      </td>
     </tr>
   </tbody>
 </table>
 
 ## Summary of stakeholder requirements for each Living Lab {#_stakeholders}
-This  section summarises the current status of the properties that have been identified as necessary for the individual CS components by the LL leaders. Thereby, the requirements for the back-end are collected separately from those for the front-end. The individual components that are considered for the back end are the
+This  section summarises the current status of the properties that have been identified as necessary for the individual CS components by the LL leaders. Thereby, the requirements for the back-end are collected separately from those for the front-end. The individual components that are considered for the **back end** are the
 
 - Climate Data Hindcast/Forecast Providers (the external data recources excluding local recources)
 
@@ -84,7 +77,7 @@ This  section summarises the current status of the properties that have been ide
 - Climate Model and Adaption/Economic Model Providers (external services or I-CISK WPs that provide the models) <br>
 
 
-On the other hand, the components which are relevant for the backend are the
+On the other hand, the components which are relevant for the **front end** are the
 
 - Visualisation Containers 
 
@@ -153,8 +146,16 @@ On the other hand, the components which are relevant for the backend are the
 [1] IBF-system, accessible via [https://github.com/rodekruis/IBF-system](https://github.com/rodekruis/IBF-system)
 
 # Architecture Constraints {#section-architecture-constraints}
+The CS software needs to meet the following constraints:
+
+- since the final CS will be an open-access platform, the CS framework should only apply open-source software
+
+- to assure interoperability of data and models, the CS framework will implement OGC standards and follow the INSPIRE implementing rules
+
+
 #
-# System Scope and Context {#section-system-scope-and-context}
+# System Scope and Technical Context {#section-system-scope-and-context}
+
 Figure 1 shows the major interfaces of the CS architecture to the CS user as well as external model providers and data recources. The user will be able to access the CS via a graphical user interface (GUI) and a REST-API. Due to the large variaty with respect to the developement stages of the individuel components, the communication protocols between the CS and the external components are so far only defined for some cases. The communication protocols for the other components will be characterised in the further course of the I-CISK project. For the components which are already more advanced, the communication protocols are indicated in Figure 1 and they are listed in Table X together with the corresponding providers.
 
 <figure>
@@ -218,22 +219,11 @@ Figure 1 shows the major interfaces of the CS architecture to the CS user as wel
   </tbody>
 </table>
 </int>
-#
-## Business Context {#_business_context}
-
-**\<Diagram or Table\>**
-
-**\<optionally: Explanation of external domain interfaces\>**
-
-## Technical Context {#_technical_context}
-
-**\<Diagram or Table\>**
-
-**\<optionally: Explanation of technical interfaces\>**
-
-**\<Mapping Input/Output to Channels\>**
 
 # Solution Strategy {#section-solution-strategy}
+
+- run everything in a cluster -> have flexible computation recources
+- wrap everything in a docker container -> dependency management ...
 
 # Building Block View {#section-building-block-view}
 
