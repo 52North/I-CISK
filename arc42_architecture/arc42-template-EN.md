@@ -23,7 +23,7 @@ The Climate Service for the I-CISK project aims to fulfill the following goals:
 
 - provide visualisation tools for the indicators;
 
-- provide stakeholders with the possibility to easily extend the existing functionality by modifying and adding individual components as well as setting up a new CS with a dedicated AUTO CS Composer
+- provide stakeholders with the possibility to easily extend the existing functionality by modifying and adding individual components as well as setting up a new CS with a dedicated AUTO CS Composer.
 
 ## Quality Goals {#_quality_goals}
 <table>
@@ -145,22 +145,18 @@ On the other hand, the components which are relevant for the **front end** are t
 
 [1] IBF-system, accessible via [https://github.com/rodekruis/IBF-system](https://github.com/rodekruis/IBF-system)
 
-# Architecture Constraints {#section-architecture-constraints}
-The CS software needs to meet the following constraints:
-
-- since the final CS will be an open-access platform, the CS framework should only apply open-source software
-
-- to assure interoperability of data and models, the CS framework will implement OGC standards and follow the INSPIRE implementing rules
-
+### Architecture Constraints {#section-architecture-constraints}
+The I-CISK climate service will be an open-access platform. Consequently, the CS framework will only apply open sources software. To assure interoperability of data and models, the CS framework will implement OGC standards and follow the INSPIRE implementing rules
 
 #
 # System Scope and Technical Context {#section-system-scope-and-context}
 
-Figure 1 shows the major interfaces of the CS architecture to the CS user as well as external model providers and data recources. The user will be able to access the CS via a graphical user interface (GUI) and a REST-API. Due to the large variaty with respect to the developement stages of the individuel components, the communication protocols between the CS and the external components are so far only defined for some cases. The communication protocols for the other components will be characterised in the further course of the I-CISK project. For the components which are already more advanced, the communication protocols are indicated in Figure 1 and they are listed in Table X together with the corresponding providers.
+Figure 1 shows the major interfaces of the CS architecture to the CS user as well as external model providers and data recources. The user will be able to access the CS via a graphical user interface (GUI) and a REST-API. Via the GUI, the CS can initiate the calculation of specific indicators and request their visualisation. The GUI will also provide the AUTO CS Composer. The REST-API can be used to integrate services provided by the I-CISK framework (e.g. WMS) into already existing platforms. <br\>
+Due to the large variaty with respect to the developement stages of the individuel components, the communication protocols between the CS and the external components are so far only defined in single cases. The communication protocols for the other components will be characterised in the further course of the I-CISK project. For the components which are already more advanced, the communication protocols are indicated in Figure 1 and they are listed in Table X together with the corresponding providers.
 
 <figure>
-  <img src="figures/architecture/I-CISK_architecture-architecture_blackbox.drawio.png"/>
-  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+  <img src="figures/scope/I-CISK_architecture-Level0_overview.drawio.png"/>
+  <figcaption> XXX </figcaption>
 </figure>
 
 <int name="interfaces">
@@ -227,6 +223,11 @@ Figure 1 shows the major interfaces of the CS architecture to the CS user as wel
 
 # Building Block View {#section-building-block-view}
 
+<figure>
+  <img src="figures/architecture/I-CISK_architecture-architecture_blackbox.drawio.png"/>
+  <figcaption> XXX </figcaption>
+</figure>
+
 ## Whitebox Overall System {#_whitebox_overall_system}
 Going into more detail about the CS architecture, Figure X illustrates the Level 1 components. All these components will be deployed in an XXX cloud []. The major responsibilities of the corresponding building blocks are
 
@@ -247,7 +248,7 @@ Do we need to also define the interfaces already?
 #
 <figure>
   <img src="figures/architecture/GeoNode_whitebox.png"/>
-  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+  <figcaption> XXX </figcaption>
 </figure>
 #
 The GeoNode web framework is built from various components of which some are mandadory and some can be used on demand. Figure XXX shows the decomposition of the GeoNode components that will be used for the I-CISK platform. These components have the following responsibilities:
@@ -271,7 +272,7 @@ The GeoNode web framework is built from various components of which some are man
 
 <figure>
   <img src="figures/architecture/I-CISK_architecture-DataAnalysisTool_whitebox.drawio.png"/>
-  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+  <figcaption> XXX </figcaption>
 </figure>
 
 
@@ -281,7 +282,7 @@ The GeoNode web framework is built from various components of which some are man
 
 <figure>
   <img src="figures/architecture/I-CISK_architecture-GUI.drawio.png"/>
-  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+  <figcaption> XXX </figcaption>
 </figure>
 
 
@@ -289,7 +290,7 @@ The GeoNode web framework is built from various components of which some are man
 
 <figure>
   <img src="figures/architecture/I-CISK_architecture-sequence_diagram.drawio.png"/>
-  <figcaption>Figure 1: Schematical view of the individual components that have been identified for the LL1</figcaption>
+  <figcaption> XXX </figcaption>
 </figure>
 
 ## \<Runtime Scenario 1\> {#__runtime_scenario_1}
