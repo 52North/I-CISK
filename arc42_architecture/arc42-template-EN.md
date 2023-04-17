@@ -11,10 +11,10 @@ Template Version 8.1 EN. (based upon AsciiDoc version), May 2022
 Created, maintained and © by Dr. Peter Hruschka, Dr. Gernot Starke and
 contributors. See <https://arc42.org>.
 
-# Introduction and Goals {#section-introduction-and-goals}
+# Introduction and Goals (GECO) {#section-introduction-and-goals}
 This document describes the architecture for the Climate Service designed for the I-CISK project.
 
-## Requirements Overview {#_requirements_overview}
+## Requirements Overview (GECO) {#_requirements_overview}
 The Climate Service for the I-CISK project aims to fulfill the following goals:
 
 - provide access to environmental data both from *external* services (e.g. from the Copernicus Program [], the Swedish Meteorological and Hydrological Institute (SMHI) []) as well as a variety of local data sources;
@@ -25,7 +25,7 @@ The Climate Service for the I-CISK project aims to fulfill the following goals:
 
 - provide stakeholders with the possibility to easily extend the existing functionality by modifying and adding individual components as well as setting up a new CS with a dedicated AUTO CS Composer.
 
-## Quality Goals {#_quality_goals}
+## Quality Goals and Tests(GECO) {#_quality_goals}
 <table>
   <caption style="text-align:center"> Table 1: List of Quality Scenarious.</caption>
   <tbody>
@@ -145,11 +145,11 @@ On the other hand, the components which are relevant for the **front end** are t
 
 [1] IBF-system, accessible via [https://github.com/rodekruis/IBF-system](https://github.com/rodekruis/IBF-system)
 
-### Architecture Constraints {#section-architecture-constraints}
+### Architecture Constraints (52N) {#section-architecture-constraints}
 The I-CISK climate service will be an open-access platform. Consequently, the CS framework will only apply open sources software. To assure interoperability of data and models, the CS framework will implement OGC standards and follow the INSPIRE implementing rules
 
 #
-# System Scope and Technical Context {#section-system-scope-and-context}
+# System Scope and Technical Context  (52N) {#section-system-scope-and-context}
 
 Figure 1 shows the major interfaces of the CS architecture to the CS user as well as external model providers and data recources. The user will be able to access the CS via a graphical user interface (GUI) and a REST-API. Via the GUI, the CS can initiate the calculation of specific indicators and request their visualisation. The GUI will also provide the AUTO CS Composer. The REST-API can be used to integrate services provided by the I-CISK framework (e.g. WMS) into already existing platforms. <br\>
 Due to the large variaty with respect to the developement stages of the individuel components, the communication protocols between the CS and the external components are so far only defined in single cases. The communication protocols for the other components will be characterised in the further course of the I-CISK project. For the components which are already more advanced, the communication protocols are indicated in Figure 1 and they are listed in Table X together with the corresponding providers.
@@ -216,12 +216,12 @@ Due to the large variaty with respect to the developement stages of the individu
 </table>
 </int>
 
-# Solution Strategy {#section-solution-strategy}
+# Solution Strategy (52N) {#section-solution-strategy}
 
 - run everything in a cluster -> have flexible computation recources
 - wrap everything in a docker container -> dependency management ...
 
-# Building Block View {#section-building-block-view}
+# Building Block View (52N) {#section-building-block-view}
 
 <figure>
   <img src="figures/architecture/I-CISK_architecture-architecture_blackbox.drawio.png"/>
@@ -286,7 +286,7 @@ The GeoNode web framework is built from various components of which some are man
 </figure>
 
 
-# Runtime View {#section-runtime-view}
+# Runtime View  (GECO) {#section-runtime-view}
 
 <figure>
   <img src="figures/architecture/I-CISK_architecture-sequence_diagram.drawio.png"/>
@@ -306,7 +306,7 @@ The GeoNode web framework is built from various components of which some are man
 
 ## \<Runtime Scenario n\> {#__runtime_scenario_n}
 
-# Deployment View {#section-deployment-view}
+# Deployment View (52N) {#section-deployment-view}
 
 ## Infrastructure Level 1 {#_infrastructure_level_1}
 
@@ -364,7 +364,7 @@ Mapping of Building Blocks to Infrastructure
 
 ## Quality Scenarios {#_quality_scenarios}
 
-# Risks and Technical Debts {#section-technical-risks}
+# Risks and Technical Debts (GECO) {#section-technical-risks}
 
 # Glossary {#section-glossary}
 <table>
